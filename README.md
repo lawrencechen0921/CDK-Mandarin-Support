@@ -31,8 +31,6 @@ The Construct Programming Model (CPM) extends the concepts behind the AWS CDK in
 
 
 ## Concepts
-
-
 ### Construct
 
 你可以把它理解成你在 AWS 單一個一個資源或是服務，如你在 AWS launch 了一臺 EC2 instance，我們就可以把它理解成一個 **construct** 的概念。但你以為就這麼單純嗎？>< 
@@ -44,10 +42,22 @@ The Construct Programming Model (CPM) extends the concepts behind the AWS CDK in
 ### Construct Layer 
 
 * Layer 1:
-All resource are in `aws-cdk-lib`.
+All resource are in `aws-cdk-lib`. 很直接跟 CFN 溝通的 resources，For example, CfnBucket represents the AWS::S3::Bucket AWS CloudFormation resource. 
 
-* Layer 2:
-* Layer 3
+* Layer 2: AWS constructs offer convenient defaults and reduce the need to know all the details about the AWS resources they represent
+  
+* Layer 3: Finally, the AWS Construct Library includes L3 constructs, which we call patterns. These constructs are designed to help you complete common tasks in AWS, often involving multiple kinds of resources
+
+### Composition
+
+Composition is the key pattern for defining higher-level abstractions through constructs. A high-level construct can be composed from any number of lower-level constructs. In turn, those could be composed from even lower-level constructs, which eventually are composed from AWS resources.
+
+
+
+
+
+
+
 ### App
 
 ### CDK Lifecycle

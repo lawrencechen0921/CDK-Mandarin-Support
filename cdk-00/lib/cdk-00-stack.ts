@@ -3,6 +3,7 @@ import {aws_s3 as s3, RemovalPolicy} from 'aws-cdk-lib';
 import { EC2_UNIQUE_IMDSV2_LAUNCH_TEMPLATE_NAME } from 'aws-cdk-lib/cx-api';
 import { Construct } from 'constructs';
 import * as ec2 from '@aws-cdk/aws-ec2';
+import {App, Stack, StackProps} from 'aws-cdk-lib';
 
 
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
@@ -28,3 +29,6 @@ export class Cdk00Stack extends cdk.Stack {
     // });
   }
 }
+
+const app = new App();
+new Cdk00Stack(app, "Cdk00Stack");
