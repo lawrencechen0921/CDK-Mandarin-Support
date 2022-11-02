@@ -2,6 +2,9 @@ import * as cdk from 'aws-cdk-lib';
 import {aws_s3 as s3, RemovalPolicy} from 'aws-cdk-lib';
 import { EC2_UNIQUE_IMDSV2_LAUNCH_TEMPLATE_NAME } from 'aws-cdk-lib/cx-api';
 import { Construct } from 'constructs';
+import * as ec2 from '@aws-cdk/aws-ec2';
+
+
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class Cdk00Stack extends cdk.Stack {
@@ -14,7 +17,6 @@ export class Cdk00Stack extends cdk.Stack {
       removalPolicy: cdk.RemovalPolicy.DESTROY,
       autoDeleteObjects: true
     });
-
 
 
 
