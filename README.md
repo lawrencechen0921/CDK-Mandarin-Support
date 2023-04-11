@@ -4,6 +4,8 @@
 
 立誌成為 CDK 界的鳥哥 ><
 
+* Updated on 2023 04/11 17:00
+
 ## Purpose
 跟隨 AWSLC 一起探索 CDK 的魅力吧！
 
@@ -60,6 +62,8 @@ Composition is the key pattern for defining higher-level abstractions through co
 
 ### App
 
+
+
 ### CDK Lifecycle
 
 * Construct --> Prepare --> Validate --> Synthesize 
@@ -101,13 +105,13 @@ Bucket is the first construct that we've seen, so let's take a closer look. Like
 
 ## Typescript 宣告變數規則
 
-* 駝峰式命名 - 如第一個字一定小寫，跟在後麵的詞組開頭一定大寫，ex: removal"P"olicy
+* 駝峰式命名 - 如第一個字一定小寫，跟在後面的詞組開頭一定大寫，ex: removal"P"olicy
 * 不用特別背誦參數名稱，通常你輸入時，`aws-lib-cdk` 會自動幫你搜尋
 * 什麼叫 [`nullish coalescing`](https://zh.javascript.info/nullish-coalescing-operator) 空值運算？
 
 *空值合並運算符（nullish coalescing operator）的寫法為兩個問號 ??。*
 
-由於它對待 null 和 undefined 的方式類似，所以在本文中我們將使用一個特殊的術語對其進行錶示。為簡潔起見，當一個值既不是 null 也不是 undefined 時，我們將其稱為“已定義的（defined）”。
+由於它對待 null 和 undefined 的方式類似，所以在本文中我們將使用一個特殊的術語對其進行表示。為簡潔起見，當一個值既不是 null 也不是 undefined 時，我們將其稱為“已定義的（defined）”。
 
 a ?? b 的結果是：
 
@@ -165,5 +169,11 @@ Node.js 原生是無法直接編譯你 typescript 的語言的，所以 typescri
 
 
 
+## CDK 注意事項
 
+CDK 是根據項目目錄的名稱命名源文件和類。如果您沒有使用前面你之前使用的目錄名稱最命名，則可能很難按照其餘步驟進行操作。說明告訴您修改的一些文件不會在那裡，因為它們將具有不同的名稱。
+
+
+* bin/xxx.ts --> 通常是主要的 application 修改入口
+* lib/xxx.ts --> 通常主要是拿來定義你的 service stack 用
 
